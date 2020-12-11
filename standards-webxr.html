@@ -9,6 +9,106 @@
 @import url("https://www.w3.org/2008/site/css/advanced");
 /*]]>*/
 </style>
+
+<style>
+  span.implstatus { display: inline-block; width: 9em;}
+  p.mdn::before { display: inline-block; width: 3em; content: "MDN"; background-color: black; color: white; font-weight: bold; padding: 0 0.2em; margin-right: 1em;}
+  
+  /* From https://w3c.github.io/web-roadmaps/assets/css/theme.css
+  /************************************************************
+Styles for the "current implementations" column
+************************************************************/
+.ua {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0 2px;
+}
+
+.ua:hover {
+    border-bottom: none;
+}
+
+.ua abbr {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+/* Hide text visually but not to accessible tools */
+.ua span {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.ua i {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Stack badges on the right on top of one another */
+.ua i:nth-child(n+3) {
+    right: -2px;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+}
+
+.ua i:nth-child(3) {
+    bottom: -5px;
+    z-index: 4;
+}
+
+.ua i:nth-child(4) {
+    bottom: 10px;
+    z-index: 3;
+}
+
+.ua i:nth-child(5) {
+    bottom: 25px;
+    z-index: 2;
+}
+
+/* Browser icons */
+.ua .baidu { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/baidu.png'); }
+.ua .chrome { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/chrome.png'); }
+.ua .edge { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/edge.png'); }
+.ua .firefox { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/firefox.png'); }
+.ua .opera { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/opera.png'); }
+.ua .qq { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/qq.png'); }
+.ua .safari { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/safari.png'); }
+.ua .samsunginternet { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/samsunginternet.png'); }
+.ua .uc { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/uc.png'); }
+.ua .webkit { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/webkit.png'); }
+
+/* Desktop/Mobile badges */
+.ua .desktop { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/desktop.svg'); }
+.ua .mobile { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/mobile.svg'); }
+.ua .desktop.mobile { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/desktop-mobile.svg'); }
+
+/* Prefix required and behind a flag badges */
+.ua .prefix { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/prefix.svg'); }
+.ua .flag { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/flag.svg'); }
+
+/* Implementation may be partial */
+.ua .partial {
+  background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/partial.svg');
+  background-size: 31px 20px !important;
+  bottom: -5px !important;
+  width: 31px !important;
+  right: 9px !important;
+  z-index: 1 !important;
+}
+
+  </style>
 <link href="https://www.w3.org/2008/site/css/minimum" rel="stylesheet" type="text/css" media="handheld, only screen and (max-device-width: 480px)" />
 <link rel="stylesheet" href="https://www.w3.org/2008/site/css/print" type="text/css" media="print" />
 <link rel="shortcut icon" href="https://www.w3.org/2008/site/images/favicon.ico" type="image/x-icon" />
@@ -77,14 +177,13 @@ ol > li {
       <div id="w3c_content_body">
         <!-- from MDN -->
     <p>WebXR is a group of standards which are used together to support rendering 3D scenes to hardware designed for presenting virtual worlds (virtual reality, or VR), or for adding graphical imagery to the real world, (augmented reality, or AR). The WebXR Device API implements the core of the WebXR feature set, managing the selection of output devices, render the 3D scene to the chosen device at the appropriate frame rate, and manage motion vectors created using input controllers.</p>
-     <h2>How to use it?</h2>
-       <ul>
-         <li>image of global architecture
-         <li><a href="https://developer.mozilla.org/en-US/docs/Web/Manifest">Web App Manifest on MDN</a>
-         <li><a href="https://caniuse.com/web-app-manifest">Can I use it?</a>
-         <li>embedded youtube video and/or link to playlist
-         <li>Links to social medias (twitter, linkedin, etc)
-       </ul>
+    
+    <h2>Use it!</h2>
+    <p class=mdn><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API on MDN</a></p>
+    <!-- As generated in Mobile Roadmap https://w3c.github.io/web-roadmaps/mobile/lifecycle.html -->
+    <div><p data-implstatus="shipped"><span class=implstatus>Shipped:</span> <a class="ua" data-ua="chrome" href="https://www.chromestatus.com/feature/6488656873259008" style="display: inline-block;"><abbr title="Shipped in Chrome (desktop, mobile). Source: Chrome Platform Status."><span>Shipped in Chrome (desktop, mobile). Source: Chrome Platform Status.</span><i class="chrome"></i><i class="desktop mobile"></i></abbr></a><a class="ua" data-ua="edge" href="https://www.chromestatus.com/feature/6488656873259008" style="display: inline-block;"><abbr title="Shipped in Microsoft Edge (desktop). Source: Chrome Platform Status."><span>Shipped in Microsoft Edge (desktop). Source: Chrome Platform Status.</span><i class="edge"></i><i class="desktop"></i></abbr></a><a class="ua" data-ua="firefox" href="https://www.chromestatus.com/feature/6488656873259008" style="display: inline-block;"><abbr title="Shipped in Firefox (desktop, mobile). Source: Chrome Platform Status."><span>Shipped in Firefox (desktop, mobile). Source: Chrome Platform Status.</span><i class="firefox"></i><i class="desktop mobile"></i></abbr></a><a class="ua" data-ua="safari" href="https://caniuse.com/#feat=web-app-manifest" style="display: inline-block;"><abbr title="Shipped in Safari (mobile). Source: Can I use."><span>Shipped in Safari (mobile). Source: Can I use.</span><i class="safari"></i><i class="mobile"></i></abbr></a><a class="ua" data-ua="baidu" href="https://caniuse.com/#feat=web-app-manifest" style="display: none;" hidden=""><abbr title="Shipped in Baidu Browser (mobile). Source: Can I use."><span>Shipped in Baidu Browser (mobile). Source: Can I use.</span><i class="baidu"></i><i class="mobile"></i></abbr></a><a class="ua" data-ua="qq" href="https://caniuse.com/#feat=web-app-manifest" style="display: none;" hidden=""><abbr title="Shipped in QQ Browser (mobile). Source: Can I use."><span>Shipped in QQ Browser (mobile). Source: Can I use.</span><i class="qq"></i><i class="mobile"></i></abbr></a><a class="ua" data-ua="samsunginternet" href="https://caniuse.com/#feat=web-app-manifest" style="display: none;" hidden=""><abbr title="Shipped in Samsung Internet (mobile). Source: Can I use."><span>Shipped in Samsung Internet (mobile). Source: Can I use.</span><i class="samsunginternet"></i><i class="mobile"></i></abbr></a><a class="ua" data-ua="uc" href="https://caniuse.com/#feat=web-app-manifest" style="display: none;" hidden=""><abbr title="Shipped in UC Browser (mobile). Source: Can I use."><span>Shipped in UC Browser (mobile). Source: Can I use.</span><i class="uc"></i><i class="mobile"></i></abbr></a></p><p data-implstatus="indevelopment"><span class=implstatus>In development:</span> <a class="ua" data-ua="safari" href="https://www.chromestatus.com/feature/6488656873259008" style="display: inline-block;"><abbr title="In development in Safari (desktop). Source: Chrome Platform Status."><span>In development in Safari (desktop). Source: Chrome Platform Status.</span><i class="safari"></i><i class="desktop"></i></abbr></a></p></div>
+    <p>🎥 Learn more with our videos:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNhYw8KaLq2UgIz02fSX-rZRg7pCgxv0R&cc_load_policy=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
      <h2>How to contribute?</h2>
      <ul>
        <li><a href="https://w3c.github.io/manifest/">Editor's draft</a>
