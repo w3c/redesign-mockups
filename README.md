@@ -1,4 +1,4 @@
 # Standard mockups
 
-* [/standards/webxr](https://w3c.github.io/standards-mockups/standards-webxr.html): Mockup for a specification with IPR
-* [/standards/cssfonts](https://w3c.github.io/standards-mockups/standards-cssfonts.html): Mockup for a specification series (multiple levels)
+* [/standards/webxr/](https://w3c.github.io/standards-mockups/standards/webxr/): Mockup for a specification
+* [/standards/css-fonts/](https://w3c.github.io/standards-mockups/standards/css-fonts/): Mockup for a specification series (multiple levels)
