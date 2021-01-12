@@ -6,3 +6,4 @@
 # Group page mockups
 
 * [/groups/wg/css/ipr](https://w3c.github.io/redesign-mockups/groups/wg/css/ipr/): Mockup for the group page IPR tab
+* [/groups/wg/css/calendar](https://w3c.github.io/redesign-mockups/groups/wg/css/calendar/): Mockup for the group page calendar tab
